@@ -1,168 +1,170 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>xiaomao's blog - ヤン・シャオマオのブログ</title><meta name="author" content="杨小毛"><meta name="copyright" content="杨小毛"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="xiaomao&#39;s blog">
+<meta property="og:url" content="http://xiaomaoyang.top/index.html">
+<meta property="og:site_name" content="xiaomao&#39;s blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://xiaomaoyang.top/img/butterfly-icon.png">
+<meta property="article:author" content="杨小毛">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://xiaomaoyang.top/img/butterfly-icon.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "xiaomao's blog",
+  "alternateName": [
+    "ヤン・シャオマオのブログ",
+    "xiaomaoyang.top"
+  ],
+  "url": "http://xiaomaoyang.top/"
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://xiaomaoyang.top/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>xiaomao&#39;s blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
     
-        <link rel="icon" href="/favicon.ico">
-    
-    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
         
-            <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-        
-            <link rel="stylesheet" href="/css/stage.css">
-        
-            <link rel="stylesheet" href="/css/avatar-bg.css">
-        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
     
-<meta name="generator" content="Hexo 8.1.1"></head>
-
-<body>
-<header id="header">
-    <div class="menu">
-        <i class="fa fa-bars"></i>
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'xiaomao\'s blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">xiaomao's blog</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">xiaomao's blog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/12/04/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A5%BD%E9%A2%98/" title="字符串好题">字符串好题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-12-04T15:17:48.000Z" title="发表于 2025-12-04 23:17:48">2025-12-04</time></span></div><div class="content">口算 题目描述王老师正在教简单算术运算。细心的王老师收集了 ii 道学生经常做错的口算题，并且想整理编写成一份练习。编排这些题目是一件繁琐的事情，为此他想用计算机程序来提高工作效率。王老师希望尽量减少输入的工作量，比如 5+85+8 的算式最好只要输入 55 和 88，输出的结果要尽量详细以方便后期排版的使用，比如对于上述输入进行处理后输出 5+8&#x3D;135+8&#x3D;13 以及该算式的总长度 66。王老师把这个光荣的任务交给你，请你帮他编程实现以上功能。 输入格式第一行一个整数 ii。 接着的 ii 行为需要输入的算式，每行可能有三个数据或两个数据。 若该行为三个数据则第一个数据表示运算类型，aa 表示加法运算，bb 表示减法运算，cc 表示乘法运算，接着的两个数据表示参加运算的运算数。 若该行为两个数据，则表示本题的运算类型与上一题的运算类型相同，而这两个数据为运算数。 输出格式输出 2×i2×i 行。对于每个输入的算式，输出完整的运算式及结果，第二行输出该运算式的总长度。 输入输出样例输入4a 64 46275 125c 11 99b 46 64输出64+46&...</div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">杨小毛</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/04/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%A5%BD%E9%A2%98/" title="字符串好题">字符串好题</a><time datetime="2025-12-04T15:17:48.000Z" title="发表于 2025-12-04 23:17:48">2025-12-04</time></div></div></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
     </div>
-    <div class="header-main">
-        <h1><a href="/">xiaomao&#39;s blog</a></h1>
-    </div>
-    <div id="nav">
-        <div class="nav-img" id="nav-img"></div>
-        <div class="sentences">
-            时光荏苒，旦夕之间，略有遗憾，似白驹过隙，蹉跎自悟。
-        </div>
-    </div>
-</header>
-
-<div id="content-outer">
-    <div id="content-inner">
-        <div class="clearfix">
-    
-    <div id="recent-posts">
-        
-            <div class="post-item">
-                <h1>
-                    <a href="/2025/12/04/字符串好题/">
-                        字符串好题
-                    </a>
-                </h1>
-                <div class="create">
-                    <span>创建于</span>
-                    
-                        <time datetime="2025-12-04T15:17:48.000Z">
-                            2025-12-04
-                        </time>
-                    
-                    
-                </div>
-                
-                    <h1 id="口算"><a href="#口算" class="headerlink" title="口算"></a>口算</h1>
-                
-                <div class="readmore">
-                    <a href="/2025/12/04/字符串好题/">
-                        阅读更多
-                    </a>
-                </div>
-            </div>
-        
-    </div>
-
-
-    <div id="content-aside">
-    <div class="content-aside-owner">
-        <div id="owner">
-    <div class="avatar-bg">
-        <div class="index-page">
-            <div class="banner">
-                <div class="slide slide1">
-                    <div class="bg-wrapper">
-                        <div class="bg" id="container_left">
-                            <div id="canvas_left"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide slide2">
-                    <div class="bg-wrapper">
-                        <div class="bg" id="container_right">
-                            <div id="canvas_right"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <a href="/"><img class="avatar" src="/images/avatar.jpg" alt=""></a>
-    <a href="/"><h3 class="author">杨小毛</h3></a>
-    <h4>ヤン・シャオマオのブログ</h4>
-    <div class="social">
-        
-            
-              <a href="https://github.com/markyong" title="github" class="fa fa-github" target="_blank"></a>
-            
-        
-            
-              <a href="#" title="weibo" class="fa fa-weibo" target="_blank"></a>
-            
-        
-    </div>
-</div>
-    </div>
-    
-        <div class="content-aside-about">
-            <h2>
-                <a href="/about">关于</a>
-            </h2>
-        </div>
-    
-    <div class="content-aside-tags">
-        <h2>
-            <a href="/tags">
-                标签
-                <sup style="font-size: 12px">
-                    [0]
-                </sup>
-            </a>
-        </h2>
-    </div>
-    
-<aside id="categories">
-    <h2>分类</h2>
-    
-        <p>None.</p>
-    
-</aside>
-
-    
-<aside id="acchives">
-    <h2>归档</h2>
-    
-    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/12/">十二月 2025</a></li></ul>
-    
-</aside>
-
-</div>
-
-</div>
-<nav id="pagination" class="clearfix">
-    <span class="page-number current">1</span>
-</nav>
-
-    </div>
-</div>
-<footer id="footer">
-    <div id="copyright">&copy; 杨小毛  2025</div>
-    <div id="theme">
-        Powered by <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a>. Theme by <a target="_blank" rel="noopener" href="https://github.com/markyong/hexo-theme-stage">Stage</a>
-    </div>
-</footer>
-<script src="/lib/js/waterrippleeffect.min.js"></script>
-<script src="/js/header-bg.main.js"></script>
-
-    <script src="/lib/js/cav.js"></script>
-    <script src="/js/avatar-bg.main.js"></script>
-
-</body>
-</html>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              十二月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">1</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-12-04T17:47:06.207Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By 杨小毛</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.2"></script><script src="/js/main.js?v=5.5.2"></script><div class="js-pjax"></div><script async data-pjax src="/"></script></div></body></html>
