@@ -34,6 +34,52 @@
       </categories>
   </entry>
   <entry>
+    <title>洛谷P1957普及-</title>
+    <url>/2025/12/04/%E6%B4%9B%E8%B0%B7P1957%E6%99%AE%E5%8F%8A-/</url>
+    <content><![CDATA[<h1 id="口算">口算</h1>
+<h2 id="题目描述">题目描述</h2>
+<p>王老师正在教简单算术运算。细心的王老师收集了 i 道学生经常做错的口算题，并且想整理编写成一份练习。编排这些题目是一件繁琐的事情，为此他想用计算机程序来提高工作效率。王老师希望尽量减少输入的工作量，比如 5+8 的算式最好只要输入 5 和 8，输出的结果要尽量详细以方便后期排版的使用，比如对于上述输入进行处理后输出 5+8=13 以及该算式的总长度 6。王老师把这个光荣的任务交给你，请你帮他编程实现以上功能。</p>
+<h2 id="输入格式">输入格式</h2>
+<p>第一行一个整数 i。</p>
+<p>接着的 i 行为需要输入的算式，每行可能有三个数据或两个数据。</p>
+<p>若该行为三个数据则第一个数据表示运算类型，a 表示加法运算，b 表示减法运算，c 表示乘法运算，接着的两个数据表示参加运算的运算数。</p>
+<p>若该行为两个数据，则表示本题的运算类型与上一题的运算类型相同，而这两个数据为运算数。</p>
+<h2 id="输出格式">输出格式</h2>
+<p>输出 2×i2×i 行。对于每个输入的算式，输出完整的运算式及结果，第二行输出该运算式的总长度。</p>
+<h2 id="输入输出样例">输入输出样例</h2>
+<p>输入 4 a 64 46 275 125 c 11 99 b 46 64 输出 64+46=110 9 275+125=400
+11 11* 99=1089 10 46-64=-18 9</p>
+<h2 id="code-achievement">code achievement</h2>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span>{</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> count;</span><br><span class="line"></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;count);</span><br><span class="line"></span><br><span class="line">getchar();<span class="comment">//收换行</span></span><br><span class="line"></span><br><span class="line"><span class="type">char</span> ch, <span class="built_in">exp</span>[<span class="number">100</span>], line[<span class="number">100</span>];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> m, n;</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"><span class="type">char</span> lastOp = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; count; i++){</span><br><span class="line"></span><br><span class="line">fgets(line, <span class="keyword">sizeof</span>(line), <span class="built_in">stdin</span>);<span class="comment">//输入计算数据</span></span><br><span class="line"></span><br><span class="line"><span class="type">char</span> ch;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 检查第一个字符是不是字母（运算符）</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(line[<span class="number">0</span>] == <span class="string">'a'</span> || line[<span class="number">0</span>] == <span class="string">'b'</span> || line[<span class="number">0</span>] == <span class="string">'c'</span>) {</span><br><span class="line"></span><br><span class="line"><span class="comment">// 是三个数据</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">sscanf</span>(line, <span class="string">"%c %d %d"</span>, &amp;lastOp, &amp;m, &amp;n);</span><br><span class="line"></span><br><span class="line">} <span class="keyword">else</span> {</span><br><span class="line"></span><br><span class="line"><span class="comment">// 是两个数据</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">sscanf</span>(line, <span class="string">"%d %d"</span>, &amp;m, &amp;n);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用上一题的运算符</span></span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"><span class="comment">//lastop作为🚩</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(lastOp == <span class="string">'a'</span>) {</span><br><span class="line"></span><br><span class="line"><span class="built_in">sprintf</span>(<span class="built_in">exp</span>, <span class="string">"%d+%d=%d"</span>, m, n, m+n);</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> len = <span class="built_in">strlen</span>(<span class="built_in">exp</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s\n%d\n"</span>, <span class="built_in">exp</span>, len);</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(lastOp == <span class="string">'b'</span>) {</span><br><span class="line"></span><br><span class="line"><span class="built_in">sprintf</span>(<span class="built_in">exp</span>, <span class="string">"%d-%d=%d"</span>, m, n, m-n);</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> len = <span class="built_in">strlen</span>(<span class="built_in">exp</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s\n%d\n"</span>, <span class="built_in">exp</span>, len);</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(lastOp == <span class="string">'c'</span>) {</span><br><span class="line"></span><br><span class="line"><span class="built_in">sprintf</span>(<span class="built_in">exp</span>, <span class="string">"%d*%d=%d"</span>, m, n, m*n);</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> len = <span class="built_in">strlen</span>(<span class="built_in">exp</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s\n%d\n"</span>, <span class="built_in">exp</span>, len);</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+
+<h3 id="sprintfsscanf">sprintf&amp;sscanf</h3>
+<h4 id="1-sprintf字符串格式化输出">1. <strong><code>sprintf</code>（字符串格式化输出）</strong></h4>
+<p><strong>作用</strong>：将格式化的数据<strong>写入字符串</strong>（类似<code>printf</code>输出到屏幕，但<code>sprintf</code>输出到字符串）</p>
+<p><strong>格式</strong>：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">sprintf</span><span class="params">(<span class="type">char</span> *str, <span class="type">const</span> <span class="type">char</span> *format, ...)</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例</strong>：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> buffer[<span class="number">100</span>];</span><br><span class="line"><span class="type">int</span> a = <span class="number">10</span>, b = <span class="number">20</span>, result = <span class="number">30</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将格式化的字符串写入buffer</span></span><br><span class="line"><span class="built_in">sprintf</span>(buffer, <span class="string">"%d+%d=%d"</span>, a, b, result);</span><br><span class="line"><span class="comment">// buffer现在的内容是："10+20=30"</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>在你代码中的应用</strong>：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sprintf</span>(<span class="built_in">exp</span>, <span class="string">"%d+%d=%d"</span>, m, n, m+n);</span><br><span class="line"><span class="comment">// 将算式和结果写入exp字符串，比如"5+8=13"</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-sscanf字符串格式化输入">2. <strong><code>sscanf</code>（字符串格式化输入）</strong></h4>
+<p><strong>作用</strong>：从字符串中<strong>读取格式化的数据</strong>（类似<code>scanf</code>从键盘读取，但<code>sscanf</code>从字符串读取）</p>
+<p><strong>格式</strong>：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">sscanf</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str, <span class="type">const</span> <span class="type">char</span> *format, ...)</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例</strong>：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> input[] = <span class="string">"a 5 8"</span>;</span><br><span class="line"><span class="type">char</span> op;</span><br><span class="line"><span class="type">int</span> x, y;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从input字符串中读取数据</span></span><br><span class="line"><span class="built_in">sscanf</span>(input, <span class="string">"%c %d %d"</span>, &amp;op, &amp;x, &amp;y);</span><br><span class="line"><span class="comment">// 结果：op='a', x=5, y=8</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>在你代码中的应用</strong>：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sscanf</span>(line, <span class="string">"%c %d %d"</span>, &amp;ch, &amp;m, &amp;n);</span><br><span class="line"><span class="comment">// 从line字符串中解析出字符和两个整数</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>algorithm</category>
+      </categories>
+  </entry>
+  <entry>
     <title>关于和式极限的求解方法</title>
     <url>/2025/12/26/%E5%85%B3%E4%BA%8E%E5%92%8C%E5%BC%8F%E6%9E%81%E9%99%90%E7%9A%84%E6%B1%82%E8%A7%A3%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h1 id="积分类">积分类</h1>
@@ -82,52 +128,6 @@
 ]]></content>
       <categories>
         <category>math</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>洛谷P1957普及-</title>
-    <url>/2025/12/04/%E6%B4%9B%E8%B0%B7P1957%E6%99%AE%E5%8F%8A-/</url>
-    <content><![CDATA[<h1 id="口算">口算</h1>
-<h2 id="题目描述">题目描述</h2>
-<p>王老师正在教简单算术运算。细心的王老师收集了 ii 道学生经常做错的口算题，并且想整理编写成一份练习。编排这些题目是一件繁琐的事情，为此他想用计算机程序来提高工作效率。王老师希望尽量减少输入的工作量，比如 5+85+8 的算式最好只要输入 55 和 88，输出的结果要尽量详细以方便后期排版的使用，比如对于上述输入进行处理后输出 5+8=135+8=13 以及该算式的总长度 66。王老师把这个光荣的任务交给你，请你帮他编程实现以上功能。</p>
-<h2 id="输入格式">输入格式</h2>
-<p>第一行一个整数 ii。</p>
-<p>接着的 ii 行为需要输入的算式，每行可能有三个数据或两个数据。</p>
-<p>若该行为三个数据则第一个数据表示运算类型，aa 表示加法运算，bb 表示减法运算，cc 表示乘法运算，接着的两个数据表示参加运算的运算数。</p>
-<p>若该行为两个数据，则表示本题的运算类型与上一题的运算类型相同，而这两个数据为运算数。</p>
-<h2 id="输出格式">输出格式</h2>
-<p>输出 2×i2×i 行。对于每个输入的算式，输出完整的运算式及结果，第二行输出该运算式的总长度。</p>
-<h2 id="输入输出样例">输入输出样例</h2>
-<p>输入 4 a 64 46 275 125 c 11 99 b 46 64 输出 64+46=110 9 275+125=400
-11 11* 99=1089 10 46-64=-18 9</p>
-<h2 id="code-achievement">code achievement</h2>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span>{</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> count;</span><br><span class="line"></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;count);</span><br><span class="line"></span><br><span class="line">getchar();<span class="comment">//收换行</span></span><br><span class="line"></span><br><span class="line"><span class="type">char</span> ch, <span class="built_in">exp</span>[<span class="number">100</span>], line[<span class="number">100</span>];</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> m, n;</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"><span class="type">char</span> lastOp = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; count; i++){</span><br><span class="line"></span><br><span class="line">fgets(line, <span class="keyword">sizeof</span>(line), <span class="built_in">stdin</span>);<span class="comment">//输入计算数据</span></span><br><span class="line"></span><br><span class="line"><span class="type">char</span> ch;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 检查第一个字符是不是字母（运算符）</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(line[<span class="number">0</span>] == <span class="string">'a'</span> || line[<span class="number">0</span>] == <span class="string">'b'</span> || line[<span class="number">0</span>] == <span class="string">'c'</span>) {</span><br><span class="line"></span><br><span class="line"><span class="comment">// 是三个数据</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">sscanf</span>(line, <span class="string">"%c %d %d"</span>, &amp;lastOp, &amp;m, &amp;n);</span><br><span class="line"></span><br><span class="line">} <span class="keyword">else</span> {</span><br><span class="line"></span><br><span class="line"><span class="comment">// 是两个数据</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">sscanf</span>(line, <span class="string">"%d %d"</span>, &amp;m, &amp;n);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 使用上一题的运算符</span></span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"><span class="comment">//lastop作为🚩</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(lastOp == <span class="string">'a'</span>) {</span><br><span class="line"></span><br><span class="line"><span class="built_in">sprintf</span>(<span class="built_in">exp</span>, <span class="string">"%d+%d=%d"</span>, m, n, m+n);</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> len = <span class="built_in">strlen</span>(<span class="built_in">exp</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s\n%d\n"</span>, <span class="built_in">exp</span>, len);</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(lastOp == <span class="string">'b'</span>) {</span><br><span class="line"></span><br><span class="line"><span class="built_in">sprintf</span>(<span class="built_in">exp</span>, <span class="string">"%d-%d=%d"</span>, m, n, m-n);</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> len = <span class="built_in">strlen</span>(<span class="built_in">exp</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s\n%d\n"</span>, <span class="built_in">exp</span>, len);</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(lastOp == <span class="string">'c'</span>) {</span><br><span class="line"></span><br><span class="line"><span class="built_in">sprintf</span>(<span class="built_in">exp</span>, <span class="string">"%d*%d=%d"</span>, m, n, m*n);</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> len = <span class="built_in">strlen</span>(<span class="built_in">exp</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%s\n%d\n"</span>, <span class="built_in">exp</span>, len);</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></table></figure>
-
-<h3 id="sprintfsscanf">sprintf&amp;sscanf</h3>
-<h4 id="1-sprintf字符串格式化输出">1. <strong><code>sprintf</code>（字符串格式化输出）</strong></h4>
-<p><strong>作用</strong>：将格式化的数据<strong>写入字符串</strong>（类似<code>printf</code>输出到屏幕，但<code>sprintf</code>输出到字符串）</p>
-<p><strong>格式</strong>：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">sprintf</span><span class="params">(<span class="type">char</span> *str, <span class="type">const</span> <span class="type">char</span> *format, ...)</span>;</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例</strong>：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> buffer[<span class="number">100</span>];</span><br><span class="line"><span class="type">int</span> a = <span class="number">10</span>, b = <span class="number">20</span>, result = <span class="number">30</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将格式化的字符串写入buffer</span></span><br><span class="line"><span class="built_in">sprintf</span>(buffer, <span class="string">"%d+%d=%d"</span>, a, b, result);</span><br><span class="line"><span class="comment">// buffer现在的内容是："10+20=30"</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>在你代码中的应用</strong>：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sprintf</span>(<span class="built_in">exp</span>, <span class="string">"%d+%d=%d"</span>, m, n, m+n);</span><br><span class="line"><span class="comment">// 将算式和结果写入exp字符串，比如"5+8=13"</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="2-sscanf字符串格式化输入">2. <strong><code>sscanf</code>（字符串格式化输入）</strong></h4>
-<p><strong>作用</strong>：从字符串中<strong>读取格式化的数据</strong>（类似<code>scanf</code>从键盘读取，但<code>sscanf</code>从字符串读取）</p>
-<p><strong>格式</strong>：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">sscanf</span><span class="params">(<span class="type">const</span> <span class="type">char</span> *str, <span class="type">const</span> <span class="type">char</span> *format, ...)</span>;</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例</strong>：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">char</span> input[] = <span class="string">"a 5 8"</span>;</span><br><span class="line"><span class="type">char</span> op;</span><br><span class="line"><span class="type">int</span> x, y;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从input字符串中读取数据</span></span><br><span class="line"><span class="built_in">sscanf</span>(input, <span class="string">"%c %d %d"</span>, &amp;op, &amp;x, &amp;y);</span><br><span class="line"><span class="comment">// 结果：op='a', x=5, y=8</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>在你代码中的应用</strong>：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sscanf</span>(line, <span class="string">"%c %d %d"</span>, &amp;ch, &amp;m, &amp;n);</span><br><span class="line"><span class="comment">// 从line字符串中解析出字符和两个整数</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>algorithm</category>
       </categories>
   </entry>
 </search>
