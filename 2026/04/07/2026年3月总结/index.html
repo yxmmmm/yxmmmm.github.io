@@ -1,0 +1,586 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>2026-3 | xiaomao's blog</title><meta name="author" content="つむぎ"><meta name="copyright" content="つむぎ"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="2026年3月总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2026-3">
+<meta property="og:url" content="https://xiaomaoyang.top/2026/04/07/2026%E5%B9%B43%E6%9C%88%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="xiaomao&#39;s blog">
+<meta property="og:description" content="2026年3月总结">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/cover/cover13.jpg">
+<meta property="article:published_time" content="2026-04-07T09:55:28.000Z">
+<meta property="article:modified_time" content="2026-04-07T09:57:06.292Z">
+<meta property="article:author" content="つむぎ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/cover/cover13.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "2026-3",
+  "url": "https://xiaomaoyang.top/2026/04/07/2026%E5%B9%B43%E6%9C%88%E6%80%BB%E7%BB%93/",
+  "image": "https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/cover/cover13.jpg",
+  "datePublished": "2026-04-07T09:55:28.000Z",
+  "dateModified": "2026-04-07T09:57:06.292Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "つむぎ",
+      "url": "https://xiaomaoyang.top"
+    }
+  ]
+}</script><link rel="shortcut icon" href="https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/%E5%85%AB%E5%8D%83%E4%BB%A3%E7%9C%9F.png"><link rel="canonical" href="https://xiaomaoyang.top/2026/04/07/2026%E5%B9%B43%E6%9C%88%E6%80%BB%E7%BB%93/index.html"><link rel="preconnect" href="//unpkg.com"/><link rel="stylesheet" href="/css/index.css?v=5.5.2"><link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><link rel="stylesheet" href="https://unpkg.com/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const hour = new Date().getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (theme === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else theme === 'light' ? activateLightMode() : activateDarkMode()
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  infinitegrid: {
+    js: 'https://unpkg.com/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '2026-3',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.1"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head><body><div id="web_bg" style="background-image: url(https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/cover/cover1.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/%E5%85%AB%E5%8D%83%E4%BB%A3%E7%9C%9F.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><span> Notes</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/algorithm/"><i class="fa-fw fas fa-code"></i><span> algorithm</span></a></li><li><a class="site-page child" href="/categories/math/"><i class="fa-fw fas fa-square-root-alt"></i><span> math</span></a></li><li><a class="site-page child" href="/categories/modeling/"><i class="fa-fw fas fa-project-diagram"></i><span> modeling</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/categories/MonthlyReport/"><i class="fa-fw fas fa-chart-line"></i><span> Monthly Report</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-info-circle"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/cover/cover13.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">xiaomao's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">2026-3</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><span> Notes</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/algorithm/"><i class="fa-fw fas fa-code"></i><span> algorithm</span></a></li><li><a class="site-page child" href="/categories/math/"><i class="fa-fw fas fa-square-root-alt"></i><span> math</span></a></li><li><a class="site-page child" href="/categories/modeling/"><i class="fa-fw fas fa-project-diagram"></i><span> modeling</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/categories/MonthlyReport/"><i class="fa-fw fas fa-chart-line"></i><span> Monthly Report</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-info-circle"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">2026-3</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-04-07T09:55:28.000Z" title="发表于 2026-04-07 17:55:28">2026-04-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-04-07T09:57:06.292Z" title="更新于 2026-04-07 17:57:06">2026-04-07</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/MonthlyReport/">MonthlyReport</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">490</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:365,&quot;messagePrev&quot;:&quot;It has been&quot;,&quot;messageNext&quot;:&quot;days since the last update, the content of the article may be outdated.&quot;,&quot;postUpdate&quot;:&quot;2026-04-07 17:57:06&quot;}" hidden></div><h1 id="date-2026年3月总结">📅 2026年3月总结</h1>
+<blockquote>
+<p>从每日笔记中提取的学习与生活汇总 🎀</p>
+</blockquote>
+<hr>
+<h2 id="bar_chart-数据概览">📊 数据概览</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>记录天数</td>
+<td>21 天</td>
+</tr>
+<tr>
+<td>能量值</td>
+<td>mostly 100 (有一天跌到0)</td>
+</tr>
+<tr>
+<td>心情值</td>
+<td>总体愉悦 🐾</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="brain-算法学习-acwing刷题">🧠 算法学习 (AcWing/刷题)</h2>
+<h3 id="已掌握">已掌握</h3>
+<ul>
+<li><p><strong>基础数据结构</strong></p>
+<ul>
+<li>单链表 ✅ (数组模拟)</li>
+<li>双链表</li>
+<li>栈和队列</li>
+<li>堆</li>
+<li>哈希表 (字符串hash)</li>
+</ul></li>
+<li><p><strong>搜索与图论</strong></p>
+<ul>
+<li>DFS 深度优先遍历 ✅</li>
+<li>BFS 广度优先遍历</li>
+<li>Trie 字典树</li>
+<li>并查集</li>
+</ul></li>
+<li><p><strong>字符串</strong></p>
+<ul>
+<li>KMP</li>
+<li>字符串hash</li>
+</ul></li>
+<li><p><strong>高级技巧</strong></p>
+<ul>
+<li>二分</li>
+<li>双指针</li>
+<li>前缀和</li>
+<li>差分</li>
+<li>区间合并</li>
+<li>位运算</li>
+<li>高精度</li>
+</ul></li>
+<li><p><strong>STL</strong> ✅ 复习完成</p></li>
+</ul>
+<h3 id="题解">题解</h3>
+<ul>
+<li>洛谷 P1217 普及-</li>
+<li>牛客寒假营第二场H</li>
+</ul>
+<h3 id="名场面">名场面</h3>
+<ul>
+<li><strong>03-23</strong>: <code>luogu首黄！虽然AI纠错</code> 🎉
+首个黄题通过！</li>
+<li><strong>03-14</strong>: 完一天，段位加不少</li>
+<li><strong>03-31</strong>: 彻底理解DFS的深度优先遍历</li>
+</ul>
+<hr>
+<h2 id="abacus-数学">🧮 数学</h2>
+<h3 id="高数">高数</h3>
+<ul>
+<li>✅ 一阶线性微分方程</li>
+<li>✅ 齐次方程</li>
+<li>✅ 常数微分方程</li>
+<li>✅ 宋浩课程跟进 (03-30 完成)</li>
+<li>✅ 高数作业 7.4.1</li>
+<li>✅ 高数狂推进/狂跟进 (多日)</li>
+</ul>
+<h3 id="大物">大物</h3>
+<ul>
+<li>✅ 第一章习题 (03-18)</li>
+<li>✅ 第二章习题 (03-25)</li>
+<li>✅ 大物选择 (03-23)</li>
+<li>✅ 大物作业 (03-30)</li>
+<li>✅ 物理一面加勘误 (03-24)</li>
+</ul>
+<hr>
+<h2 id="dart-数模起步">🎯 数模起步</h2>
+<ul>
+<li><strong>03-19</strong>:
+终于开始数模理论学习！挖了太久的坑终于填了</li>
+<li><strong>03-28</strong>: 数据预处理初步</li>
+</ul>
+<hr>
+<h2 id="muscle-生活小事">💪 生活小事</h2>
+<h3 id="高光时刻">高光时刻</h3>
+<ul>
+<li><strong>03-17</strong>: 入坑首个高达，淮安第一次starbarks ✅</li>
+<li>健身了真的好爽 (03-04)</li>
+</ul>
+<h3 id="低潮时刻">低潮时刻</h3>
+<ul>
+<li><strong>03-24</strong>: 自嘲
+<code>你就这么贱吗就不能好好思考个题吗🤣</code></li>
+</ul>
+<h3 id="感悟">感悟</h3>
+<ul>
+<li>03-19: 终于开始数模理论学习，挖了太久的坑了</li>
+<li>03-28: 最卷的一集</li>
+</ul>
+<hr>
+<h2 id="date-月度打卡">📅 月度打卡</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">21天记录</label></li>
+<li><label><input type="checkbox" checked="">算法基础课程推进</label></li>
+<li><label><input type="checkbox" checked="">高数跟进</label></li>
+<li><label><input type="checkbox" checked="">大物习题</label></li>
+<li><label><input type="checkbox" checked="">数模起步</label></li>
+<li><label><input type="checkbox">...继续加油！</label></li>
+</ul>
+<hr>
+<blockquote>
+<p>佛祖保佑，永无BUG 🧧</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">                   _ooOoo_</span><br><span class="line">                  o8888888o</span><br><span class="line">                  88" . "88</span><br><span class="line">                  (| -_- |)</span><br><span class="line">                  O\  =  /O</span><br><span class="line">               ____/'---'\____</span><br><span class="line">             .'  \\|     |//  '.</span><br><span class="line">            /  \\|||  :  |||//  \</span><br><span class="line">           /  -||||| -:- |||||-  \</span><br><span class="line">           |   | \\\  -  /// |   |</span><br><span class="line">           | \_|  ''\---/''  |_/ |</span><br><span class="line">           \  .-\__  '-'  ___/-. /</span><br><span class="line">         ___'. .'  /--.--\  '. .'___</span><br><span class="line">      ."" '&lt;  '.___\_&lt;|&gt;_/___.'  &gt;' "".</span><br><span class="line">     | | :  '- \'.:'\ _ /':.'/ - ' : | |</span><br><span class="line">     \  \ '-.   \_ __\ /__ _/   .-' /  /</span><br><span class="line">======'-.____'-.___\_____/___.-'____.-'======</span><br><span class="line">                   '=---='</span><br><span class="line">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://xiaomaoyang.top">つむぎ</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://xiaomaoyang.top/2026/04/07/2026%E5%B9%B43%E6%9C%88%E6%80%BB%E7%BB%93/">https://xiaomaoyang.top/2026/04/07/2026%E5%B9%B43%E6%9C%88%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://xiaomaoyang.top" target="_blank">xiaomao's blog</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/cover/cover13.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://unpkg.com/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://unpkg.com/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/03/30/%E4%BC%A0%E7%BB%9F%E7%BB%93%E6%9E%84%E4%BD%93%E9%93%BE%E8%A1%A8%E5%92%8C%E6%95%B0%E7%BB%84%E6%A8%A1%E6%8B%9F%E9%93%BE%E8%A1%A8%E8%BE%A8%E6%9E%90/" title="传统结构体链表和数组模拟链表辨析"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/cover/cover19.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">传统结构体链表和数组模拟链表辨析</div></div><div class="info-2"><div class="info-item-1">如题</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/%E5%85%AB%E5%8D%83%E4%BB%A3%E7%9C%9F.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">つむぎ</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/yxmmmm"><i class="fab fa-github"></i><span>Come Here!</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://www.zhihu.com/people/maple-50-97-42" target="_blank" title="知乎"><i class="fab fa-zhihu"></i></a><a class="social-icon" href="mailto:wf061017@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Welcome to my blog!</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#date-2026%E5%B9%B43%E6%9C%88%E6%80%BB%E7%BB%93"><span class="toc-text">📅 2026年3月总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#bar_chart-%E6%95%B0%E6%8D%AE%E6%A6%82%E8%A7%88"><span class="toc-text">📊 数据概览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#brain-%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0-acwing%E5%88%B7%E9%A2%98"><span class="toc-text">🧠 算法学习 (AcWing&#x2F;刷题)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%B2%E6%8E%8C%E6%8F%A1"><span class="toc-text">已掌握</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E8%A7%A3"><span class="toc-text">题解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8D%E5%9C%BA%E9%9D%A2"><span class="toc-text">名场面</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#abacus-%E6%95%B0%E5%AD%A6"><span class="toc-text">🧮 数学</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E6%95%B0"><span class="toc-text">高数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E7%89%A9"><span class="toc-text">大物</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dart-%E6%95%B0%E6%A8%A1%E8%B5%B7%E6%AD%A5"><span class="toc-text">🎯 数模起步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#muscle-%E7%94%9F%E6%B4%BB%E5%B0%8F%E4%BA%8B"><span class="toc-text">💪 生活小事</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E5%85%89%E6%97%B6%E5%88%BB"><span class="toc-text">高光时刻</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%8E%E6%BD%AE%E6%97%B6%E5%88%BB"><span class="toc-text">低潮时刻</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%84%9F%E6%82%9F"><span class="toc-text">感悟</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#date-%E6%9C%88%E5%BA%A6%E6%89%93%E5%8D%A1"><span class="toc-text">📅 月度打卡</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background: transparent;"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By つむぎ</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.2"></script><script src="/js/main.js?v=5.5.2"></script><script src="/js/tw_cn.js?v=5.5.2"></script><script src="https://unpkg.com/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://unpkg.com/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://unpkg.com/node-snackbar@0.1.16/dist/snackbar.min.js"></script><div class="js-pjax"></div><link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://unpkg.com/butterfly-extsrc@1.1.6/metingjs/dist/Meting.min.js"></script><script>(() => {
+  const destroyAplayer = () => {
+    if (window.aplayers) {
+      for (let i = 0; i < window.aplayers.length; i++) {
+        if (!window.aplayers[i].options.fixed) {
+          window.aplayers[i].destroy()
+        }
+      }
+    }
+  }
+
+  const runMetingJS = () => {
+    typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+  }
+
+  btf.addGlobalFn('pjaxSend', destroyAplayer, 'destroyAplayer')
+  btf.addGlobalFn('pjaxComplete', loadMeting, 'runMetingJS')
+})()</script><script src="https://unpkg.com/pjax@0.2.8/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      const usePjax = true
+      true
+        ? (usePjax ? pjax.loadUrl('/404.html') : window.location.href = '/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})()</script><script>(() => {
+  const option = null
+  const config = {"site_uv":false,"site_pv":false,"page_pv":false,"token":"api_O4O8TmDl8VfN6hUk9zuLSzYcRiIoLmuK"}
+
+  const runTrack = () => {
+    if (typeof umami !== 'undefined' && typeof umami.track === 'function') {
+      umami.track(props => ({ ...props, url: window.location.pathname, title: GLOBAL_CONFIG_SITE.title }))
+    } else {
+      console.warn('Umami Analytics: umami.track is not available')
+    }
+  }
+
+  const loadUmamiJS = () => {
+    btf.getScript('https://cloud.umami.is/script.js', {
+      'data-website-id': '27761778-b66c-42ba-9533-9dd79d3717ed',
+      'data-auto-track': 'false',
+      ...option
+    }).then(() => {
+      runTrack()
+    }).catch(error => {
+      console.error('Umami Analytics: Error loading script', error)
+    })
+  }
+
+  const getData = async (isPost) => {
+    try {
+      const now = Date.now()
+      const keyUrl = isPost ? `&url=${window.location.pathname}` : ''
+      const headerList = { 'Accept': 'application/json' }
+
+      if (true) {
+        headerList['Authorization'] = `Bearer ${config.token}`
+      } else {
+        headerList['x-umami-api-key'] = config.token
+      }
+
+      const res = await fetch(`https://cloud.umami.is/api/websites/27761778-b66c-42ba-9533-9dd79d3717ed/stats?startAt=0000000000&endAt=${now}${keyUrl}`, {
+        method: "GET",
+        headers: headerList
+      })
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`)
+      }
+
+      return await res.json()
+    } catch (error) {
+      console.error('Umami Analytics: Failed to fetch data', error)
+      throw error
+    }
+  }
+
+  const insertData = async () => {
+    try {
+      if (GLOBAL_CONFIG_SITE.pageType === 'post' && config.page_pv) {
+        const pagePV = document.getElementById('umamiPV')
+        if (pagePV) {
+          const data = await getData(true)
+          if (data && data.pageviews && typeof data.pageviews.value !== 'undefined') {
+            pagePV.textContent = data.pageviews.value
+          } else {
+            console.warn('Umami Analytics: Invalid page view data received')
+          }
+        }
+      }
+
+      if (config.site_uv || config.site_pv) {
+        const data = await getData(false)
+
+        if (config.site_uv) {
+          const siteUV = document.getElementById('umami-site-uv')
+          if (siteUV && data && data.visitors && typeof data.visitors.value !== 'undefined') {
+            siteUV.textContent = data.visitors.value
+          } else if (siteUV) {
+            console.warn('Umami Analytics: Invalid site UV data received')
+          }
+        }
+
+        if (config.site_pv) {
+          const sitePV = document.getElementById('umami-site-pv')
+          if (sitePV && data && data.pageviews && typeof data.pageviews.value !== 'undefined') {
+            sitePV.textContent = data.pageviews.value
+          } else if (sitePV) {
+            console.warn('Umami Analytics: Invalid site PV data received')
+          }
+        }
+      }
+    } catch (error) {
+      console.error('Umami Analytics: Failed to insert data', error)
+    }
+  }
+
+  btf.addGlobalFn('pjaxComplete', runTrack, 'umami_analytics_run_track')
+  btf.addGlobalFn('pjaxComplete', insertData, 'umami_analytics_insert')
+
+
+  loadUmamiJS()
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', insertData)
+  } else {
+    setTimeout(insertData, 100)
+  }
+})()</script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.2"></script></div></div></body></html>
