@@ -1,0 +1,796 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>2026年4月总结 | xiaomao's blog</title><meta name="author" content="つむぎ"><meta name="copyright" content="つむぎ"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="2026年4月总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2026年4月总结">
+<meta property="og:url" content="https://xiaomaoyang.top/2026/05/05/2026%E5%B9%B44%E6%9C%88%E6%80%BB%E7%BB%93/index.html">
+<meta property="og:site_name" content="xiaomao&#39;s blog">
+<meta property="og:description" content="2026年4月总结">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/cover/cover18.jpg">
+<meta property="article:published_time" content="2026-05-05T11:04:14.000Z">
+<meta property="article:modified_time" content="2026-05-05T11:06:07.399Z">
+<meta property="article:author" content="つむぎ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/cover/cover18.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "2026年4月总结",
+  "url": "https://xiaomaoyang.top/2026/05/05/2026%E5%B9%B44%E6%9C%88%E6%80%BB%E7%BB%93/",
+  "image": "https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/cover/cover18.jpg",
+  "datePublished": "2026-05-05T11:04:14.000Z",
+  "dateModified": "2026-05-05T11:06:07.399Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "つむぎ",
+      "url": "https://xiaomaoyang.top"
+    }
+  ]
+}</script><link rel="shortcut icon" href="https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/%E5%85%AB%E5%8D%83%E4%BB%A3%E7%9C%9F.png"><link rel="canonical" href="https://xiaomaoyang.top/2026/05/05/2026%E5%B9%B44%E6%9C%88%E6%80%BB%E7%BB%93/index.html"><link rel="preconnect" href="//unpkg.com"/><link rel="stylesheet" href="/css/index.css?v=5.5.2"><link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><link rel="stylesheet" href="https://unpkg.com/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const hour = new Date().getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (theme === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else theme === 'light' ? activateLightMode() : activateDarkMode()
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-right"},
+  infinitegrid: {
+    js: 'https://unpkg.com/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '2026年4月总结',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 8.1.1"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head><body><div id="web_bg" style="background-image: url(https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/cover/cover1.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/%E5%85%AB%E5%8D%83%E4%BB%A3%E7%9C%9F.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><span> Notes</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/algorithm/"><i class="fa-fw fas fa-code"></i><span> algorithm</span></a></li><li><a class="site-page child" href="/categories/math/"><i class="fa-fw fas fa-square-root-alt"></i><span> math</span></a></li><li><a class="site-page child" href="/categories/modeling/"><i class="fa-fw fas fa-project-diagram"></i><span> modeling</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/categories/MonthlyReport/"><i class="fa-fw fas fa-chart-line"></i><span> Monthly Report</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-info-circle"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/cover/cover18.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">xiaomao's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">2026年4月总结</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><span class="site-page group"><span> Notes</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/categories/algorithm/"><i class="fa-fw fas fa-code"></i><span> algorithm</span></a></li><li><a class="site-page child" href="/categories/math/"><i class="fa-fw fas fa-square-root-alt"></i><span> math</span></a></li><li><a class="site-page child" href="/categories/modeling/"><i class="fa-fw fas fa-project-diagram"></i><span> modeling</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/categories/MonthlyReport/"><i class="fa-fw fas fa-chart-line"></i><span> Monthly Report</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-info-circle"></i><span> About</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">2026年4月总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-05-05T11:04:14.000Z" title="发表于 2026-05-05 19:04:14">2026-05-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-05-05T11:06:07.399Z" title="更新于 2026-05-05 19:06:07">2026-05-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/MonthlyReport/">MonthlyReport</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">1.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:365,&quot;messagePrev&quot;:&quot;本文已超过&quot;,&quot;messageNext&quot;:&quot;天未更新，内容可能已过时。&quot;,&quot;postUpdate&quot;:&quot;2026-05-05 19:06:07&quot;}" hidden></div><h1 id="date-2026年4月总结">📅 2026年4月总结</h1>
+<blockquote>
+<p>从每日笔记、打卡组件与四月新增/修改笔记中提取的学习与生活汇总 🎀</p>
+</blockquote>
+<hr>
+<h2 id="bar_chart-数据概览">📊 数据概览</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>数值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>记录天数</td>
+<td>13 天</td>
+</tr>
+<tr>
+<td>四月相关 md 文件</td>
+<td>101 个</td>
+</tr>
+<tr>
+<td>完成任务</td>
+<td>21 项</td>
+</tr>
+<tr>
+<td>非零平均心情值</td>
+<td>91.7</td>
+</tr>
+<tr>
+<td>非零平均能量值</td>
+<td>79.0</td>
+</tr>
+<tr>
+<td>去重后完成打卡</td>
+<td>55 条</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>四月整体是一个「前半月高效推进 → 中后期疲惫波动 →
+月底重新收心转向数模」的月份。</p>
+</blockquote>
+<hr>
+<h2 id="brain-算法学习图论主线推进明显">🧠
+算法学习：图论主线推进明显</h2>
+<h3 id="已推进内容">已推进内容</h3>
+<ul>
+<li><p><strong>树与图的 DFS</strong></p>
+<ul>
+<li>树的重心</li>
+<li>无向图建边</li>
+<li>子树大小统计</li>
+<li>DFS 回溯理解</li>
+</ul></li>
+<li><p><strong>树与图的 BFS</strong></p>
+<ul>
+<li>图中点的层次</li>
+<li>BFS 队列层序推进</li>
+<li>和 DFS 的适用场景对比</li>
+</ul></li>
+<li><p><strong>拓扑排序</strong></p>
+<ul>
+<li>多个入度为 0 的点同时入队时，拓扑序不唯一</li>
+<li>只要满足前驱在前、后继在后即可，判题交给 Special Judge</li>
+</ul></li>
+<li><p><strong>最短路</strong></p>
+<ul>
+<li>朴素 Dijkstra ✅</li>
+<li>复现朴素 Dijkstra ✅</li>
+<li>建立最短路体系图：单源/多源、正权/负权分类</li>
+</ul></li>
+<li><p><strong>STL 系统整理</strong></p>
+<ul>
+<li>vector / deque / stack / queue / priority_queue</li>
+<li>set / map / string / pair / bitset</li>
+<li>迭代器、常用算法、lambda、结构化绑定等</li>
+</ul></li>
+<li><p><strong>竞赛技巧整理</strong></p>
+<ul>
+<li><code>0x3f3f3f3f</code> 作为无穷大</li>
+<li>负数取模</li>
+<li>大数判断奇偶</li>
+<li>整行读取</li>
+<li>边遍历边删除</li>
+</ul></li>
+</ul>
+<h3 id="相关笔记">相关笔记</h3>
+<ul>
+<li><code>algorithm/🌲dfs.md</code></li>
+<li><code>algorithm/🌲bfs.md</code></li>
+<li><code>algorithm/最短路.md</code></li>
+<li><code>algorithm/STL.md</code></li>
+<li><code>algorithm/trick.md</code></li>
+<li><code>blog/树与图的dfs和bfs.md</code></li>
+</ul>
+<h3 id="名场面">名场面</h3>
+<ul>
+<li><strong>04-07</strong>：图的
+BFS、拓扑排序、宋浩多元函数同日完成，复盘：<code>高效</code></li>
+<li><strong>04-10</strong>：朴素 Dijkstra + KMP 复习</li>
+<li><strong>04-11</strong>：复现朴素 Dijkstra</li>
+<li><strong>04-17</strong>：备赛天梯赛，复盘：<code>纯独立完成澄题</code></li>
+</ul>
+<blockquote>
+<p>四月算法不是单纯刷题，而是进入了「题目 → 模板 → 体系图 →
+博客化理解」的阶段。</p>
+</blockquote>
+<hr>
+<h2 id="abacus-数学与课程">🧮 数学与课程</h2>
+<h3 id="高数">高数</h3>
+<ul>
+<li><strong>04-07</strong>：宋浩多元函数</li>
+<li><strong>04-11</strong>：宋浩跟进</li>
+<li><strong>04-12</strong>：高数预习</li>
+<li><strong>04-14</strong>：高数基本补完</li>
+<li><strong>04-21</strong>：高数拼命补</li>
+</ul>
+<p>高数这条线在四月持续推进，尤其 <strong>04-14</strong>
+是很强的一天：</p>
+<blockquote>
+<p>最卷的一集，能用的时间都没浪费</p>
+</blockquote>
+<h3 id="大物">大物</h3>
+<ul>
+<li><strong>04-01</strong>：大物</li>
+<li><strong>04-02</strong>：完成大物作业</li>
+<li><strong>04-09</strong>：结束刚体</li>
+<li><strong>04-11</strong>：大物作业</li>
+<li><strong>04-13</strong>：大物练习 2</li>
+</ul>
+<p>大物完成度不错，但情绪成本偏高：</p>
+<blockquote>
+<p>大物真的恶心</p>
+</blockquote>
+<h3 id="小结">小结</h3>
+<p>四月课程学习的特点是：高数靠主动补进度，大物更多是硬啃作业与练习。大物需要继续拆小块处理，避免一次性吞太多导致负反馈爆炸。</p>
+<hr>
+<h2 id="dart-数学建模月底成为新重心">🎯 数学建模：月底成为新重心</h2>
+<h3 id="已推进内容-1">已推进内容</h3>
+<ul>
+<li><p><strong>插值</strong></p>
+<ul>
+<li>笔记：<code>math modeling/插值.md</code></li>
+</ul></li>
+<li><p><strong>层次分析法</strong></p>
+<ul>
+<li>矩阵的秩</li>
+<li>判断矩阵/层次分析相关图示</li>
+<li>笔记：<code>math modeling/层次分析法.md</code></li>
+</ul></li>
+<li><p><strong>模拟退火</strong></p>
+<ul>
+<li>核心思想：高温时敢接受坏解，低温时逐渐收敛到好解</li>
+<li>关键流程：初始解 → 随机扰动 → 判断是否接受 → 降温 → 输出最优解</li>
+<li>关键总结：<strong>好解必收，坏解看运气，运气随温度递减</strong></li>
+<li>笔记：<code>math modeling/模拟退火.md</code></li>
+</ul></li>
+</ul>
+<h3 id="数模相关日记">数模相关日记</h3>
+<ul>
+<li><strong>04-25</strong>：数模</li>
+<li><strong>04-29</strong>：数模讨论</li>
+</ul>
+<p>月底的两句话很关键：</p>
+<blockquote>
+<p>摆了一周该收心了</p>
+</blockquote>
+<blockquote>
+<p>先把数模搞好吧</p>
+</blockquote>
+<p>这说明四月底已经开始从疲惫期里重新找主线，而新主线很可能就是数模。</p>
+<hr>
+<h2 id="snake-python-与-cs-兴趣">🐍 Python 与 CS 兴趣</h2>
+<p>四月有一次明显的 Python/CS 工具链推进：</p>
+<ul>
+<li><code>python.md</code> 大幅整理，约 30KB</li>
+<li><strong>04-12</strong>：完成 <code>py速通</code></li>
+<li>同日灵感：</li>
+</ul>
+<blockquote>
+<p>折腾一天 Claude kitty 我是真的喜欢 cs🥰</p>
+</blockquote>
+<p>这句话很重要，说明
+CS/工具链/Claude/终端环境不是纯任务，而是真正能给自己正反馈的兴趣源。</p>
+<h3 id="关键词">关键词</h3>
+<ul>
+<li>Python 速通</li>
+<li>Claude</li>
+<li>Kitty</li>
+<li>终端环境</li>
+<li>AI 工具链</li>
+<li>CS 兴趣复燃</li>
+</ul>
+<h3 id="疲惫阶段">疲惫阶段</h3>
+<p><strong>04-21</strong> 是四月明显低谷：</p>
+<blockquote>
+<p>感觉又到了疲惫期了，干什么都没有兴趣为什么一直这样啊<br>
+内耗中消磨掉时间<br>
+赶紧调整状态啊啊啊难受</p>
+</blockquote>
+<p>这一天 mood 和 energy 都记为
+0。它不是普通偷懒，而是一次比较明显的情绪/动力低谷。</p>
+<h3 id="收心阶段">收心阶段</h3>
+<p><strong>04-25</strong> 写到：</p>
+<blockquote>
+<p>摆了一周该收心了</p>
+</blockquote>
+<p><strong>04-29</strong> 写到：</p>
+<blockquote>
+<p>先把数模搞好吧</p>
+</blockquote>
+<p>说明月底已经开始重新找主线，状态并没有彻底掉下去，而是在重新聚焦。</p>
+<hr>
+<h2 id="date-月度打卡">📅 月度打卡</h2>
+<h3 id="完成情况">完成情况</h3>
+<ul class="task-list">
+<li><label><input type="checkbox" checked="">13
+天日记记录</label></li>
+<li><label><input type="checkbox" checked="">21
+项任务完成</label></li>
+<li><label><input type="checkbox" checked="">英语单词持续打卡</label></li>
+<li><label><input type="checkbox" checked="">健身若干次</label></li>
+<li><label><input type="checkbox" checked="">算法图论推进</label></li>
+<li><label><input type="checkbox" checked="">高数持续跟进</label></li>
+<li><label><input type="checkbox" checked="">大物作业/练习推进</label></li>
+<li><label><input type="checkbox" checked="">数模开始成为新重心</label></li>
+<li><label><input type="checkbox" checked="">Python/CS
+工具链折腾</label></li>
+</ul>
+<h3 id="打卡观察">打卡观察</h3>
+<ul>
+<li><code>🔤英语单词</code> 是四月最稳定的习惯</li>
+<li><code>🏋️健身</code> 有记录，但不连续</li>
+<li><code>戒色</code>
+有大量记录，但组件中存在补记/重复/取消情况，适合看趋势，不宜精确计数</li>
+</ul>
+<hr>
+<h2 id="compass-五月建议">🧭 五月建议</h2>
+<h3 id="1-数模作为主线">1. 数模作为主线</h3>
+<p>五月可以顺势把数模推进到能实战套模板：</p>
+<ul>
+<li>插值</li>
+<li>层次分析法</li>
+<li>模拟退火</li>
+<li>线性规划/整数规划</li>
+<li>Python 建模代码模板</li>
+<li>常见论文结构模板</li>
+</ul>
+<p>目标：<strong>从“看懂概念”推进到“能做一题”。</strong></p>
+<h3 id="2-算法继续沿图论走">2. 算法继续沿图论走</h3>
+<p>四月已经完成 DFS/BFS/朴素 Dijkstra，五月可以继续：</p>
+<ul>
+<li>堆优化 Dijkstra</li>
+<li>Bellman-Ford</li>
+<li>SPFA</li>
+<li>Floyd</li>
+<li>最小生成树</li>
+<li>并查集复盘</li>
+</ul>
+<p>目标：<strong>每个算法形成：模板 + 适用条件 + 易错点 +
+一道例题。</strong></p>
+<h3 id="3-状态管理不要靠爆发">3. 状态管理不要靠爆发</h3>
+<p>四月证明了自己能爆发，但也说明爆发后容易进入疲惫期。五月更适合做小而稳的推进：</p>
+<ul>
+<li>每天只抓一件最重要的事</li>
+<li>大物这类负反馈任务拆小块</li>
+<li>CS/Claude/工具链折腾可以作为奖励型学习</li>
+<li>不要用连续高压维持学习状态</li>
+</ul>
+<hr>
+<h2 id="star2-四月关键词">🌟 四月关键词</h2>
+<ul>
+<li>图论推进</li>
+<li>STL 系统整理</li>
+<li>Dijkstra</li>
+<li>高数补进度</li>
+<li>大物硬啃</li>
+<li>数模启动</li>
+<li>Python 速通</li>
+<li>Claude / Kitty</li>
+<li>疲惫期</li>
+<li>收心</li>
+</ul>
+<hr>
+<h2 id="paw_prints-月度结语">🐾 月度结语</h2>
+<p>四月不是摆烂月，而是一个很典型的「高强度推进后回落，再重新找到方向」的月份。</p>
+<p>前半月你确实很猛：算法、数学、大物、Python、Claude
+折腾同时推进，还把不少内容整理成系统笔记和博客雏形。后半月虽然有疲惫和内耗，但月底已经把方向重新放到数模上。</p>
+<p>五月不要急着把自己再次烧干。保持主线，慢慢推进，稳定变强就够了。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://xiaomaoyang.top">つむぎ</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://xiaomaoyang.top/2026/05/05/2026%E5%B9%B44%E6%9C%88%E6%80%BB%E7%BB%93/">https://xiaomaoyang.top/2026/05/05/2026%E5%B9%B44%E6%9C%88%E6%80%BB%E7%BB%93/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://xiaomaoyang.top" target="_blank">xiaomao's blog</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/cover/cover18.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://unpkg.com/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://unpkg.com/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/04/07/%E6%A0%91%E4%B8%8E%E5%9B%BE%E7%9A%84dfs%E5%92%8Cbfs/" title="树与图的dfs和bfs"><img class="cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/cover/cover5.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">树与图的dfs和bfs</div></div><div class="info-2"><div class="info-item-1">如题</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://tuchuang-1387570672.cos.ap-nanjing.myqcloud.com/%E5%85%AB%E5%8D%83%E4%BB%A3%E7%9C%9F.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">つむぎ</div><div class="author-info-description">Xiaomao Yang 的个人博客，记录算法、数学、建模与日常</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/yxmmmm"><i class="fab fa-github"></i><span>Come Here!</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://www.zhihu.com/people/maple-50-97-42" target="_blank" title="知乎"><i class="fab fa-zhihu"></i></a><a class="social-icon" href="mailto:wf061017@163.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">Welcome to my blog!</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#date-2026%E5%B9%B44%E6%9C%88%E6%80%BB%E7%BB%93"><span class="toc-text">📅 2026年4月总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#bar_chart-%E6%95%B0%E6%8D%AE%E6%A6%82%E8%A7%88"><span class="toc-text">📊 数据概览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#brain-%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E5%9B%BE%E8%AE%BA%E4%B8%BB%E7%BA%BF%E6%8E%A8%E8%BF%9B%E6%98%8E%E6%98%BE"><span class="toc-text">🧠
+算法学习：图论主线推进明显</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%B2%E6%8E%A8%E8%BF%9B%E5%86%85%E5%AE%B9"><span class="toc-text">已推进内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E7%AC%94%E8%AE%B0"><span class="toc-text">相关笔记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8D%E5%9C%BA%E9%9D%A2"><span class="toc-text">名场面</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#abacus-%E6%95%B0%E5%AD%A6%E4%B8%8E%E8%AF%BE%E7%A8%8B"><span class="toc-text">🧮 数学与课程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E6%95%B0"><span class="toc-text">高数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%A7%E7%89%A9"><span class="toc-text">大物</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-text">小结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dart-%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1%E6%9C%88%E5%BA%95%E6%88%90%E4%B8%BA%E6%96%B0%E9%87%8D%E5%BF%83"><span class="toc-text">🎯 数学建模：月底成为新重心</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%B2%E6%8E%A8%E8%BF%9B%E5%86%85%E5%AE%B9-1"><span class="toc-text">已推进内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%A8%A1%E7%9B%B8%E5%85%B3%E6%97%A5%E8%AE%B0"><span class="toc-text">数模相关日记</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#snake-python-%E4%B8%8E-cs-%E5%85%B4%E8%B6%A3"><span class="toc-text">🐍 Python 与 CS 兴趣</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D"><span class="toc-text">关键词</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%96%B2%E6%83%AB%E9%98%B6%E6%AE%B5"><span class="toc-text">疲惫阶段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%B6%E5%BF%83%E9%98%B6%E6%AE%B5"><span class="toc-text">收心阶段</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#date-%E6%9C%88%E5%BA%A6%E6%89%93%E5%8D%A1"><span class="toc-text">📅 月度打卡</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E6%88%90%E6%83%85%E5%86%B5"><span class="toc-text">完成情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%8D%A1%E8%A7%82%E5%AF%9F"><span class="toc-text">打卡观察</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#compass-%E4%BA%94%E6%9C%88%E5%BB%BA%E8%AE%AE"><span class="toc-text">🧭 五月建议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%95%B0%E6%A8%A1%E4%BD%9C%E4%B8%BA%E4%B8%BB%E7%BA%BF"><span class="toc-text">1. 数模作为主线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%AE%97%E6%B3%95%E7%BB%A7%E7%BB%AD%E6%B2%BF%E5%9B%BE%E8%AE%BA%E8%B5%B0"><span class="toc-text">2. 算法继续沿图论走</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E4%B8%8D%E8%A6%81%E9%9D%A0%E7%88%86%E5%8F%91"><span class="toc-text">3. 状态管理不要靠爆发</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#star2-%E5%9B%9B%E6%9C%88%E5%85%B3%E9%94%AE%E8%AF%8D"><span class="toc-text">🌟 四月关键词</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#paw_prints-%E6%9C%88%E5%BA%A6%E7%BB%93%E8%AF%AD"><span class="toc-text">🐾 月度结语</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background: transparent;"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By つむぎ</span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.2"></script><script src="/js/main.js?v=5.5.2"></script><script src="/js/tw_cn.js?v=5.5.2"></script><script src="https://unpkg.com/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://unpkg.com/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://unpkg.com/node-snackbar@0.1.16/dist/snackbar.min.js"></script><div class="js-pjax"><script>(() => {
+  const runMermaid = ele => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    ele.forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const config = mermaidSrc.dataset.config ? JSON.parse(mermaidSrc.dataset.config) : {}
+      if (!config.theme) {
+        config.theme = theme
+      }
+      const mermaidThemeConfig = `%%{init: ${JSON.stringify(config)}}%%\n`
+      const mermaidID = `mermaid-${index}`
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+      const renderMermaid = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      // mermaid v9 and v10 compatibility
+      typeof renderFn === 'string' ? renderMermaid(renderFn) : renderFn.then(({ svg }) => renderMermaid(svg))
+    })
+  }
+
+  const codeToMermaid = () => {
+    const codeMermaidEle = document.querySelectorAll('pre > code.mermaid')
+    if (codeMermaidEle.length === 0) return
+
+    codeMermaidEle.forEach(ele => {
+      const preEle = document.createElement('pre')
+      preEle.className = 'mermaid-src'
+      preEle.hidden = true
+      preEle.textContent = ele.textContent
+      const newEle = document.createElement('div')
+      newEle.className = 'mermaid-wrap'
+      newEle.appendChild(preEle)
+      ele.parentNode.replaceWith(newEle)
+    })
+  }
+
+  const loadMermaid = () => {
+    if (true) codeToMermaid()
+    const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+    if ($mermaid.length === 0) return
+
+    const runMermaidFn = () => runMermaid($mermaid)
+    btf.addGlobalFn('themeChange', runMermaidFn, 'mermaid')
+    window.loadMermaid ? runMermaidFn() : btf.getScript('https://unpkg.com/mermaid@11.12.1/dist/mermaid.min.js').then(runMermaidFn)
+  }
+
+  btf.addGlobalFn('encrypt', loadMermaid, 'mermaid')
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script></div><link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://unpkg.com/butterfly-extsrc@1.1.6/metingjs/dist/Meting.min.js"></script><script>(() => {
+  const destroyAplayer = () => {
+    if (window.aplayers) {
+      for (let i = 0; i < window.aplayers.length; i++) {
+        if (!window.aplayers[i].options.fixed) {
+          window.aplayers[i].destroy()
+        }
+      }
+    }
+  }
+
+  const runMetingJS = () => {
+    typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+  }
+
+  btf.addGlobalFn('pjaxSend', destroyAplayer, 'destroyAplayer')
+  btf.addGlobalFn('pjaxComplete', loadMeting, 'runMetingJS')
+})()</script><script src="https://unpkg.com/pjax@0.2.8/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => {
+      try {
+        fn()
+      } catch (err) {
+        console.debug('Pjax callback failed:', err)
+      }
+    })
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      const usePjax = true
+      true
+        ? (usePjax ? pjax.loadUrl('/404.html') : window.location.href = '/404.html')
+        : window.location.href = e.request.responseURL
+    }
+  })
+})()</script><script>(() => {
+  const option = null
+  const config = {"site_uv":false,"site_pv":false,"page_pv":false,"token":null}
+
+  const runTrack = () => {
+    if (typeof umami !== 'undefined' && typeof umami.track === 'function') {
+      umami.track(props => ({ ...props, url: window.location.pathname, title: GLOBAL_CONFIG_SITE.title }))
+    } else {
+      console.warn('Umami Analytics: umami.track is not available')
+    }
+  }
+
+  const loadUmamiJS = () => {
+    btf.getScript('https://cloud.umami.is/script.js', {
+      'data-website-id': '27761778-b66c-42ba-9533-9dd79d3717ed',
+      'data-auto-track': 'false',
+      ...option
+    }).then(() => {
+      runTrack()
+    }).catch(error => {
+      console.error('Umami Analytics: Error loading script', error)
+    })
+  }
+
+  const getData = async (isPost) => {
+    try {
+      const now = Date.now()
+      const keyUrl = isPost ? `&url=${window.location.pathname}` : ''
+      const headerList = { 'Accept': 'application/json' }
+
+      if (true) {
+        headerList['Authorization'] = `Bearer ${config.token}`
+      } else {
+        headerList['x-umami-api-key'] = config.token
+      }
+
+      const res = await fetch(`https://cloud.umami.is/api/websites/27761778-b66c-42ba-9533-9dd79d3717ed/stats?startAt=0000000000&endAt=${now}${keyUrl}`, {
+        method: "GET",
+        headers: headerList
+      })
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`)
+      }
+
+      return await res.json()
+    } catch (error) {
+      console.error('Umami Analytics: Failed to fetch data', error)
+      throw error
+    }
+  }
+
+  const insertData = async () => {
+    try {
+      if (GLOBAL_CONFIG_SITE.pageType === 'post' && config.page_pv) {
+        const pagePV = document.getElementById('umamiPV')
+        if (pagePV) {
+          const data = await getData(true)
+          if (data && data.pageviews && typeof data.pageviews.value !== 'undefined') {
+            pagePV.textContent = data.pageviews.value
+          } else {
+            console.warn('Umami Analytics: Invalid page view data received')
+          }
+        }
+      }
+
+      if (config.site_uv || config.site_pv) {
+        const data = await getData(false)
+
+        if (config.site_uv) {
+          const siteUV = document.getElementById('umami-site-uv')
+          if (siteUV && data && data.visitors && typeof data.visitors.value !== 'undefined') {
+            siteUV.textContent = data.visitors.value
+          } else if (siteUV) {
+            console.warn('Umami Analytics: Invalid site UV data received')
+          }
+        }
+
+        if (config.site_pv) {
+          const sitePV = document.getElementById('umami-site-pv')
+          if (sitePV && data && data.pageviews && typeof data.pageviews.value !== 'undefined') {
+            sitePV.textContent = data.pageviews.value
+          } else if (sitePV) {
+            console.warn('Umami Analytics: Invalid site PV data received')
+          }
+        }
+      }
+    } catch (error) {
+      console.error('Umami Analytics: Failed to insert data', error)
+    }
+  }
+
+  btf.addGlobalFn('pjaxComplete', runTrack, 'umami_analytics_run_track')
+  btf.addGlobalFn('pjaxComplete', insertData, 'umami_analytics_insert')
+
+
+  loadUmamiJS()
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', insertData)
+  } else {
+    setTimeout(insertData, 100)
+  }
+})()</script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.2"></script></div></div></body></html>
