@@ -1,4 +1,4 @@
-root {
+:root {
   --card-bg: rgba(255, 255, 255, 0.8);
 }
 
@@ -6,20 +6,12 @@ root {
   --card-bg: rgba(255, 255, 255, 0.2);
 }
 
-/* 禁用头像旋转 - 彻底版 */
-.avatar,
-.avatar:hover,
-.avatar img,
-.avatar-img,
-.avatar-img:hover,
-.author-avatar,
-.author-avatar:hover,
-#owner .avatar,
-#owner .avatar:hover,
-.site-author-image,
-.site-author-image:hover {
-    transform: rotate(0deg) !important;
-    -webkit-transform: rotate(0deg) !important;
-    animation: none !important;
-    transition: none !important;
+/* 禁用侧边栏头像鼠标悬停旋转 */
+.avatar-img img,
+.avatar-img img:hover,
+.avatar-img:hover img {
+  transform: none !important;
+  -webkit-transform: none !important;
+  transition: filter 375ms ease-in .2s !important;
+  animation: none !important;
 }
