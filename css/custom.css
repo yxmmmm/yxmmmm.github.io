@@ -15,3 +15,13 @@
   transition: filter 375ms ease-in .2s !important;
   animation: none !important;
 }
+
+#aside-content .card-info .site-data > a[href="/tags/"],
+#sidebar .site-data > a[href="/tags/"] {
+  display: none !important;
+}
+
+#aside-content .card-info .site-data > a:not([href="/tags/"]),
+#sidebar .site-data > a:not([href="/tags/"]) {
+  width: 50%;
+}
