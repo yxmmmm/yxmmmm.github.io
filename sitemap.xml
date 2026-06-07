@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xiaomaoyang.top/2026/06/07/%E5%93%88%E5%B8%8C%E8%A1%A8/</loc>
+    
+    <lastmod>2026-06-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://xiaomaoyang.top/2026/06/03/quicksort/</loc>
     
     <lastmod>2026-06-02</lastmod>
@@ -157,7 +166,7 @@
 
   <url>
     <loc>https://xiaomaoyang.top/</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -167,28 +176,28 @@
   
   <url>
     <loc>https://xiaomaoyang.top/categories/MonthlyReport/</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiaomaoyang.top/categories/modeling/</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiaomaoyang.top/categories/algorithm/</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://xiaomaoyang.top/categories/math/</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
