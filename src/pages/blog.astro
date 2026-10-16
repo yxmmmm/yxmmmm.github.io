@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+import PostList from '../components/PostList.astro';
+import Icon from '../components/Icon.astro';
+import { allPosts, categoryName } from '../lib/posts';
+const posts = await allPosts();
+const categories = [...new Set(posts.map(p=>p.data.category))];
+---
+<Base title="文章">
+  <section class="wrap inner-page blog-page">
+    <p class="eyebrow">WRITING & NOTES</p>
+    <h1>文章与记录。</h1>
+      <div class="writing-heading"><p class="page-intro">共 {posts.length} 篇文章</p><label class="search"><Icon name="search" size={16} /><input id="search" type="search" placeholder="搜索文章…" aria-label="搜索文章" /></label></div>
+      <div class="filter-bar" role="group" aria-label="筛选文章"><button class="active" data-filter="all" aria-pressed="true">全部</button>{categories.map(c=><button data-filter={c} aria-pressed="false">{categoryName(c)}</button>)}</div>
+      <PostList posts={posts} /><p id="empty" hidden role="status">没有找到匹配的文章，试试其他关键词。</p><p id="result-count" class="sr-only" aria-live="polite"></p>
+  </section>
+  <script>
+    let category = 'all';
+    const input = document.querySelector<HTMLInputElement>('#search')!;
+    const rows = [...document.querySelectorAll<HTMLElement>('.post-row')];
+    function filter() {
+      const query = input.value.trim().toLowerCase();
+      let count = 0;
+      rows.forEach(row => { row.hidden = !((category === 'all' || row.dataset.category === category) && row.dataset.search!.includes(query)); if (!row.hidden) count++; });
+      document.getElementById('empty')!.hidden = count > 0;
+      document.getElementById('result-count')!.textContent = `找到 ${count} 篇文章`;
+    }
+    input.addEventListener('input', filter);
+    const buttons = [...document.querySelectorAll<HTMLButtonElement>('[data-filter]')];
+    function selectCategory(value: string) {
+      category = buttons.some(button=>button.dataset.filter===value) ? value : 'all';
+      buttons.forEach(button=>{ const active = button.dataset.filter===category; button.classList.toggle('active',active); button.setAttribute('aria-pressed',String(active)); });
+      filter();
+    }
+    selectCategory(new URLSearchParams(location.search).get('category') || 'all');
+    window.addEventListener('popstate',()=>selectCategory(new URLSearchParams(location.search).get('category') || 'all'));
+    document.querySelectorAll<HTMLButtonElement>('[data-filter]').forEach(button => button.addEventListener('click',()=> {
+      selectCategory(button.dataset.filter!);
+      const url = new URL(location.href);
+      if (category === 'all') url.searchParams.delete('category');
+      else url.searchParams.set('category', category);
+      history.pushState(null,'',url);
+    }));
+  </script>
+</Base>

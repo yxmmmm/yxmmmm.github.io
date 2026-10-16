@@ -1,0 +1,16 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostList from '../../components/PostList.astro';
+import { allPosts, dateLabel } from '../../lib/posts';
+export async function getStaticPaths() {
+  const posts = await allPosts();
+  const periods = new Set<string>();
+  posts.forEach(p=>{ const parts = dateLabel(p.data.date).split('.'); periods.add(parts[0]); periods.add(parts.slice(0,2).join('/')); });
+  return [...periods].map(period=>({params:{period},props:{posts:posts.filter(p=>dateLabel(p.data.date).replaceAll('.','/').startsWith(period)),label:period.replace('/','年 ')}})).concat([
+    {params:{period:'page/2'},props:{posts:posts.slice(10),label:'更早的记录'}},
+    {params:{period:'2026/page/2'},props:{posts:posts.filter(p=>p.data.date.startsWith('2026')).slice(10),label:'2026 更早的记录'}},
+  ]);
+}
+const { posts, label } = Astro.props;
+---
+<Base title={`归档 · ${label}`}><section class="wrap inner-page"><a class="back-link" href="/archives/">← 完整归档</a><p class="eyebrow">THE ARCHIVE</p><h1>{label}</h1><PostList posts={posts} /></section></Base>

@@ -1,0 +1,7 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostList from '../../components/PostList.astro';
+import { allPosts } from '../../lib/posts';
+const posts = (await allPosts()).slice(10);
+---
+<Base title="更早的记录"><section class="wrap inner-page"><p class="eyebrow">EARLIER NOTES</p><h1>更早的记录。</h1><PostList posts={posts} /><a class="text-link" href="/">← 回到首页</a></section></Base>

@@ -1,0 +1,19 @@
+---
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import { allPosts, categoryName, dateLabel } from '../lib/posts';
+export async function getStaticPaths() { return (await allPosts()).map(post=>({params:{slug:post.data.permalink.slice(1,-1)},props:{post}})); }
+const { post } = Astro.props;
+const { Content, headings } = await render(post);
+---
+<Base title={post.data.title} description={post.data.description} article>
+  <div class="article-wrap wrap"><a class="back-link" href="/archives/">← 所有文章</a>
+    <header class="article-header"><a class="category" href={`/blog/?category=${encodeURIComponent(post.data.category)}`}>{categoryName(post.data.category)}</a><h1>{post.data.title}</h1><p><time datetime={post.data.date}>{dateLabel(post.data.date)}</time><span> / </span>更新于 {dateLabel(post.data.updated)}</p></header>
+    <div class="article-grid"><article class="prose"><Content /></article>
+      {headings.length > 0 && <aside class="toc"><span class="eyebrow">ON THIS PAGE</span><nav aria-label="文章目录">{headings.filter(h=>h.depth<=3).map(h=><a class:list={{indent:h.depth>=3}} href={`#${h.slug}`}>{h.text}</a>)}</nav></aside>}
+    </div><div class="article-end">— 感谢读到这里 — <a href="/">回到首页 ↗</a></div>
+  </div>
+</Base>
+<script>
+  import '../scripts/article-enhancements';
+</script>

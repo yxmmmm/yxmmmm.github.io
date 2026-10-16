@@ -1,0 +1,46 @@
+---
+import '../styles/global.css';
+import 'katex/dist/katex.min.css';
+import Icon from '../components/Icon.astro';
+const { title = "xiaomao's blog", description = '记录算法、数学、建模与日常。', article = false } = Astro.props;
+const current = Astro.url.pathname;
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width" />
+    <title>{title === "xiaomao's blog" ? title : `${title} · xiaomao's blog`}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={new URL(current, Astro.site)} />
+    <meta property="og:title" content={title} /><meta property="og:description" content={description} />
+    <meta property="og:type" content={article ? 'article' : 'website'} />
+    <meta property="og:url" content={new URL(current, Astro.site)} />
+    <link rel="icon" href="/img/favicon.ico" />
+    <script is:inline>
+      try { const saved = localStorage.getItem('color-mode'); document.documentElement.dataset.theme = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); } catch {}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">跳到正文</a>
+    <header class="site-header wrap">
+      <a href="/" class="brand">Xiaomao's Blog<span class="brand-spark">✳</span></a>
+      <nav aria-label="主导航">
+        {[['/', '首页'], ['/blog/', '文章'], ['/archives/', '归档'], ['/about/', '关于']].map(([href,label]) => <a href={href} aria-current={current === href ? 'page' : undefined}>{label}</a>)}
+        <button id="theme-toggle" aria-label="切换深浅配色" title="切换深浅配色"><span class="theme-sun"><Icon name="sun" /></span><span class="theme-moon"><Icon name="moon" /></span></button>
+      </nav>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer wrap"><span>© 2025–2026 つむぎ</span><span>Made with curiosity <a href="https://github.com/yxmmmm" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span></footer>
+    <script>
+      const header = document.querySelector('.site-header');
+      const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 24);
+      window.addEventListener('scroll', updateHeader, { passive: true });
+      updateHeader();
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = theme;
+        try { localStorage.setItem('color-mode', theme); } catch {}
+      });
+    </script>
+  </body>
+</html>

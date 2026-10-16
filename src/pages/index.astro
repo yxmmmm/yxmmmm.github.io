@@ -1,0 +1,48 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { allPosts, dateLabel } from '../lib/posts';
+const posts = await allPosts();
+const categories = [...new Set(posts.map(p=>p.data.category))];
+const latest = posts.reduce((value, post)=>post.data.updated > value ? post.data.updated : value, posts[0].data.updated);
+const year = Number(dateLabel(latest).slice(0,4));
+const start = new Date(Date.UTC(year,0,1));
+start.setUTCDate(start.getUTCDate()-start.getUTCDay());
+const counts = new Map<string,number>();
+posts.forEach(post=>{const key=dateLabel(post.data.date).replaceAll('.','-');counts.set(key,(counts.get(key)||0)+1);});
+const weeks = Array.from({length:53},(_,week)=>Array.from({length:7},(_,day)=>{
+ const date = new Date(start); date.setUTCDate(date.getUTCDate()+week*7+day);
+ const key=date.toISOString().slice(0,10);
+ return {key,day,week,inYear:date.getUTCFullYear()===year,count:counts.get(key)||0,month:date.getUTCMonth(),date:date.getUTCDate()};
+}));
+const months = weeks.flatMap(week=>week.filter(day=>day.inYear&&day.date===1));
+const annualCount = posts.filter(post=>dateLabel(post.data.date).startsWith(String(year))).length;
+---
+<Base>
+  <section class="profile wrap axi-profile" aria-label="个人简介">
+    <div class="profile-heading">
+      <div class="avatar-frame"><img src="/img/avatar.png" alt="Xiaomao 的头像" width="144" height="144" fetchpriority="high" /></div>
+      <div class="profile-identity"><h1>Xiaomao</h1><p class="profile-alias">つむぎ / Xiaomao Yang</p>
+        <div class="profile-links"><span><Icon name="pin" size={15} />中国</span><a href="https://github.com/yxmmmm" target="_blank" rel="noopener noreferrer"><Icon name="github" size={15} />GitHub</a><a href="https://www.zhihu.com/people/maple-50-97-42" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">知</span>知乎</a><a href="mailto:wf061017@163.com"><Icon name="mail" size={15} />Email</a></div>
+      </div>
+    </div>
+  </section>
+  <div class="home-content wrap axi-home">
+    <section class="home-section"><div class="section-label"><h2>About</h2></div>
+      <div class="section-body"><p class="about-lead">学生 <span class="inline-divider">/</span> <span class="quiet-badge">保持好奇，慢慢生长。</span></p><p class="about-copy">你好，我是 Xiaomao，一名学习计算机科学的大学生。喜欢数学、算法、节奏游戏和魔方，在这里记录算法、数学、建模与日常。</p><a class="soft-link" href="/about/">更多关于我 <Icon name="arrow" size={15} /></a></div>
+    </section>
+    <section class="home-section"><div class="section-label"><h2>Education</h2></div>
+      <div class="section-body"><div class="education-card"><h3>南京林业大学</h3><p>计算机科学 · 本科在读</p><span>NANJING FORESTRY UNIVERSITY</span></div></div>
+    </section>
+    <section class="home-section"><div class="section-label"><h2>Statistics</h2></div>
+      <div class="section-body"><div class="stats-grid"><div><strong>{posts.length}</strong><span>篇公开文章</span></div><div><strong class="stat-date">{dateLabel(latest)}</strong><span>最近更新</span></div><div><strong>{categories.length}</strong><span>个内容方向</span></div></div><div class="stats-total"><span>所有文章</span><a href="/blog/">{posts.length} 篇记录 <Icon name="arrow" size={14} /></a></div></div>
+    </section>
+    <section class="publication-calendar" aria-label={`${year} 年文章发布记录`}>
+      <div class="calendar-scroll"><svg viewBox="0 0 690 118" width="690" height="118" role="img" aria-labelledby="calendar-title calendar-description"><title id="calendar-title">{year} 年文章发布记录</title><desc id="calendar-description">{year} 年共发布 {annualCount} 篇文章，色块表示每天发布的篇数。</desc>
+        {months.map(month=><text x={34+month.week*12} y="13" class="calendar-label">{month.month+1}月</text>)}
+        {[['一',1],['三',3],['五',5]].map(([label,day])=><text x="4" y={33+Number(day)*12} class="calendar-label">{label}</text>)}
+        {weeks.flatMap(week=>week.map(day=><rect x={34+day.week*12} y={22+day.day*12} width="9" height="9" rx="2" class:list={['calendar-day',{'has-post':day.count>0,'more-posts':day.count>1,'outside-year':!day.inYear}]}><title>{day.key} · {day.count} 篇文章</title></rect>))}
+      </svg></div><div class="calendar-caption"><span>{year} 年，留下了 {annualCount} 篇记录</span><span class="calendar-legend">少<i></i><i></i><i></i>多</span></div>
+    </section>
+  </div>
+</Base>

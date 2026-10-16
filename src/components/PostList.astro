@@ -1,0 +1,16 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { categoryName, dateLabel } from '../lib/posts';
+interface Props { posts: CollectionEntry<'posts'>[]; }
+const { posts } = Astro.props;
+---
+<div class="post-list">
+  {posts.map((post) => <article class="post-row" data-category={post.data.category} data-search={`${post.data.title} ${post.data.description} ${categoryName(post.data.category)}`.toLowerCase()}>
+    <time datetime={post.data.date}>{dateLabel(post.data.date)}</time>
+    <div class="post-row-body"><a class="category" href={`/blog/?category=${encodeURIComponent(post.data.category)}`}>{categoryName(post.data.category)}</a>
+      <h2><a href={post.data.permalink}>{post.data.title}</a></h2>
+      <p>{post.data.description}</p>
+    </div>
+    <a class="post-arrow" href={post.data.permalink} aria-label={`阅读${post.data.title}`}>↗</a>
+  </article>)}
+</div>

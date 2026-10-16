@@ -1,0 +1,5 @@
+---
+import Base from '../layouts/Base.astro';
+import about from '../data/about.html?raw';
+---
+<Base title="关于我"><section class="wrap inner-page"><p class="eyebrow">A LITTLE ABOUT ME</p><h1>你好，我是 Xiaomao。</h1><article class="prose about-prose" set:html={about} /></section></Base>
