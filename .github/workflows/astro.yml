@@ -1,14 +1,9 @@
-name: Build Astro preview
+name: Build and deploy Astro
 on:
   push:
     branches: [main, 'codex/astro-migration']
   pull_request:
   workflow_dispatch:
-    inputs:
-      deploy:
-        description: Deploy to GitHub Pages (enable only after reviewing the migration)
-        type: boolean
-        default: false
 permissions:
   contents: read
 jobs:
@@ -28,9 +23,12 @@ jobs:
         with:
           path: dist
   deploy:
-    if: github.event_name == 'workflow_dispatch' && inputs.deploy && github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
+    concurrency:
+      group: github-pages
+      cancel-in-progress: true
     permissions:
       pages: write
       id-token: write

@@ -1,6 +1,6 @@
 # Xiaomao 的博客 · Astro 迁移预览
 
-这是从 Hexo / Butterfly 迁移到 Astro 的本地试用版本。当前分支为 `codex/astro-migration`，线上网站仍由旧版本提供。
+这是从 Hexo / Butterfly 迁移到 Astro 的博客源码。`main` 分支通过 GitHub Actions 构建并部署到 GitHub Pages。
 
 ## 本地运行
 
@@ -51,9 +51,7 @@ source: "original"
 
 ## GitHub Pages
 
-`public/CNAME` 保留 `xiaomaoyang.top`。工作流默认只构建和验证，并上传构建产物，避免试用阶段替换线上网站。
-
-决定上线后：将迁移分支合并到 main，在 GitHub 仓库 Settings → Pages 中选择 GitHub Actions，再手动运行 `Build Astro preview` 工作流并启用 deploy。确认上线后，可以将工作流调整为 main 提交后自动部署。
+`public/CNAME` 保留 `xiaomaoyang.top`。GitHub Pages 使用 GitHub Actions 部署。提交到 `main` 后，`Build and deploy Astro` 工作流会检查、构建、验证并发布 `dist/`；其他分支和 Pull Request 只运行构建检查。也可以手动触发工作流重新发布。
 
 原始文章来自用户自己的博客和笔记仓库。框架参考：[内容集合](https://docs.astro.build/en/guides/content-collections/)、[GitHub Pages 部署](https://docs.astro.build/en/guides/deploy/github/)。
 
