@@ -78,6 +78,12 @@ for (const dir of ['img','pdf']) fs.cpSync(path.join(root,dir),path.join(root,'p
 fs.copyFileSync(path.join(root,'CNAME'),path.join(root,'public/CNAME'));
 // About uses only the already-published content, avoiding new personal details from the vault.
 const $about = load(fs.readFileSync(path.join(root,'about/index.html'),'utf8'));
+$about('img[data-lazy-src]').each((_,el)=>{
+  $about(el).attr('src',$about(el).attr('data-lazy-src')).attr('loading','lazy').attr('decoding','async').removeAttr('data-lazy-src');
+});
+$about('#article-container div[style*="display: flex"]').each((_,el)=>{
+  $about(el).css('flex-wrap','wrap');
+});
 write(path.join(root,'src/data/about.html'),$about('#article-container').html() || $about('#page').html() || '');
 write(path.join(root,'migration-report.json'),JSON.stringify(report,null,2));
 const oldPages = ['index.html','about','archives','categories','page','2025','2026'].flatMap(name=>{

@@ -32,6 +32,13 @@ for(const file of walk(dist).filter(f=>f.endsWith('.html'))) {
   });
 }
 assert.deepEqual(errors,[],'Internal links and local assets must resolve');
+const about = load(fs.readFileSync(path.join(dist,'about/index.html'),'utf8'));
+const aboutImages = about('.about-prose img');
+assert.equal(aboutImages.length,4,'All four published About photos must survive');
+aboutImages.each((_,el)=>{
+  assert.match(about(el).attr('src') || '',/^https:\/\//,'About photos must use real image URLs, not placeholder GIFs');
+  assert.equal(about(el).attr('data-lazy-src'),undefined,'About must not depend on the removed Hexo lazy loader');
+});
 const math=fs.readFileSync(path.join(dist,'2025/12/26/关于和式极限的求解方法/index.html'),'utf8');
 assert.ok(math.includes('katex'),'Math rendering must be present');
 assert.ok(load(math)('.katex-display').length >= 3,'Obsidian single-line double-dollar formulas must render as display math');
