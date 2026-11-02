@@ -43,5 +43,10 @@ const math=fs.readFileSync(path.join(dist,'2025/12/26/关于和式极限的求�
 assert.ok(math.includes('katex'),'Math rendering must be present');
 assert.ok(load(math)('.katex-display').length >= 3,'Obsidian single-line double-dollar formulas must render as display math');
 assert.ok(fs.existsSync(path.join(dist,'pdf/最终稿.pdf')),'Published PDF must survive');
+const mcm = load(fs.readFileSync(path.join(dist,'2026/02/24/2026MCM C题/index.html'),'utf8'));
+assert.equal(mcm('.prose object[type="application/pdf"]').length,1,'MCM PDF must render as an embedded document rather than a code block');
+assert.ok(mcm('.prose a[href="/pdf/最终稿.pdf"]').length,'MCM PDF must also have a standalone reading link');
+const graph = load(fs.readFileSync(path.join(dist,'2026/04/07/树与图的dfs和bfs/index.html'),'utf8'));
+assert.equal(graph('.prose img[src^="/img/posts/tree-graph/"]').length,3,'All three graph illustrations must use bundled images');
 assert.equal(fs.readFileSync(path.join(dist,'CNAME'),'utf8').trim(),'xiaomaoyang.top');
 console.log('PASS: 16 articles, unique original URLs, substantive bodies, legacy pages, internal links/assets, formula rendering, PDF and custom domain.');

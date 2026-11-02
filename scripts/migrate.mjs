@@ -49,9 +49,20 @@ for (const year of ['2025', '2026']) for (const file of walk(path.join(root,year
       $(el).replaceWith(replacement);
     });
     article.find('img[data-lazy-src]').each((_,el)=>$(el).attr('src',$(el).attr('data-lazy-src')));
+    article.find('embed[type="application/pdf"]').each((_,el)=>{
+      const src = $(el).attr('src');
+      const link = $('<p><a target="_blank" rel="noopener noreferrer">在新窗口阅读完整论文 PDF ↗</a></p>');
+      link.find('a').attr('href',src);
+      const viewer = $('<object type="application/pdf" width="100%" height="700"><p>当前浏览器不支持内嵌 PDF，请使用上方链接打开完整论文。</p></object>').attr('data',src);
+      $(el).before(link).replaceWith(viewer);
+    });
     // Keep original math markup, tables and code when an exact Markdown source is unavailable.
-    body = article.html() || '';
+    body = (article.html() || '').replace(/^[\t ]+(?=<(?:\/?div|embed)\b)/gm,'');
   }
+  body = body.replace(/https:\/\/pic-out\.zhimg\.com\/v2-([a-f0-9]{32})[^)\s]+/g,(url,hash)=>{
+    const local = `/img/posts/tree-graph/${hash}.jpg`;
+    return fs.existsSync(path.join(root,'public',local)) ? local : url;
+  });
   const embeds = [...body.matchAll(/!\[\[([^\]]+)\]\]/g)].map(m=>m[1]);
   const unresolved = [];
   body = body.replace(/!\[\[([^\]]+)\]\]/g, (_,target)=> {

@@ -12,7 +12,7 @@ source: "obsidian-vault/blog/树与图的dfs和bfs.md"
 
 ### [树的重心](https://www.acwing.com/activity/content/problem/content/909/)
 
-![img](https://pic-out.zhimg.com/v2-fc12df120736bd3ed68bad2ae0d20a9d~resize:1440:q75.jpg?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1775571479-0-0-99a3f0edd751f2fcbcd12c4b63c53b4d&bizSceneCode=article_draft&expiration=1775571479&incremental=false&mid=18e0d87e3931e3e37d85f63de498200e&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)
+![img](/img/posts/tree-graph/fc12df120736bd3ed68bad2ae0d20a9d.jpg)
 
 ```cpp
 #include <bits/stdc++.h>
@@ -124,11 +124,11 @@ signed main()
 
 [拓扑排序](https://www.acwing.com/problem/content/850/)
 
-![img](https://pic-out.zhimg.com/v2-cdfc984cf3fbec2d2f17508d069ba87a~resize:1440:q75.jpg?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1775571479-0-0-b1977369cd0a4d04b4be328dec3476f4&bizSceneCode=article_draft&expiration=1775571479&incremental=false&mid=18e0d87e3931e3e37d85f63de498200e&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)
+![img](/img/posts/tree-graph/cdfc984cf3fbec2d2f17508d069ba87a.jpg)
 
 
 
-![img](https://pic-out.zhimg.com/v2-cc7a8cd92cfc50d9f6d86ddf85605d30~resize:1440:q75.jpg?animatedImageAutoPlay=false&animatedImagePlayCount=1&auth_key=1775571479-0-0-fe893798083a2ccb3e86e862221a9047&bizSceneCode=article_draft&expiration=1775571479&incremental=false&mid=18e0d87e3931e3e37d85f63de498200e&overTime=60&precoder=false&protocol=v2&retryCount=3&sampling=false&sceneCode=editor_copy_outbound&source=bfcaadb1)
+![img](/img/posts/tree-graph/cc7a8cd92cfc50d9f6d86ddf85605d30.jpg)
 
 ```cpp
 #include <bits/stdc++.h>
